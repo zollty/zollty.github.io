@@ -1,4 +1,4 @@
 zollty.github.io
 ================
 
-Welcome, this is Zollty Tsou's Home Page!
+just the technical articles!
