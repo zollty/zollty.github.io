@@ -1,4 +1,4 @@
 zollty.github.io
 ================
 
-just the technical articles!
+http://blog.zollty.com
