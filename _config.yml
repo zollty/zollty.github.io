@@ -6,14 +6,14 @@ markdown: rdiscount
 author: 
   name: Zollty
   email: zollty@163.com
-  link: 
+  link: http://blog.zollty.com
   weibo: 
-  github: http://zollty.github.io/blog2
+  github: https://github.com/zollty/zollty.github.io
 
 # 站点信息
 title: Zollty Blog 
 description: Zollty Blog
-url: http://zollty.github.io/blog2
+url: http://blog.zollty.com
 rss_url: 
 
 # gavatar头像及Favicon
