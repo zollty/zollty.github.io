@@ -1,0 +1,44 @@
+permalink: /:year/:month/:day/:title.html
+paginate: 10
+markdown: rdiscount
+
+# 作者信息
+author: 
+  name: Zollty
+  email: zollty@163.com
+  link: 
+  weibo: 
+  github: http://zollty.github.io/blog2
+
+# 站点信息
+title: Zollty Blog 
+description: Zollty Blog
+url: http://zollty.github.io/blog2
+rss_url: 
+
+# gavatar头像及Favicon
+gavatar: /public/upload/gavatar/gavatar.jpg
+favicon: /public/upload/gavatar/favicon.ico
+
+# google analytics 设置
+ga:
+  id: 
+  url: 
+
+# disqus 设置
+disqus:
+  shortname: zollty
+
+# 主题设置，自动激活某个标签
+active: 技术
+
+# 首页除了最新文章外显示分类
+cates: 
+  - Docker
+  - Java
+
+# 中文本地化
+locals:
+  tags: 标签
+  about: 关于
+  newest: 最新文章
