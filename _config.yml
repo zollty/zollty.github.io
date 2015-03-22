@@ -1,4 +1,4 @@
-permalink: /blog/:year/:month/:title.html
+permalink: /archive/:year/:month/:title.html
 paginate: 10
 markdown: rdiscount
 
