@@ -17,8 +17,8 @@ url: http://blog.zollty.com
 rss_url: 
 
 # gavatar头像及Favicon
-gavatar: http://ires.qiniudn.com/avatar-50-50.jpg
-favicon: http://ires.qiniudn.com/favicon.ico
+gavatar: http://ires.qiniudn.com/my/img/avatar-50-50.jpg
+favicon: http://ires.qiniudn.com/my/img/favicon.ico
 
 # google analytics 设置
 ga:
