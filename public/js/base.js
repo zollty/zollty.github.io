@@ -85,7 +85,7 @@ $(document).ready(function() {
   });
   contentEffects();
   
-  duoshuoQuery = {short_name:$('.ds-thread').attr('data-name')};
+  duoshuoQuery = {short_name:$('.ds-thread').attr('data-dsname')};
   (function() {
 	var ds = document.createElement('script');
 	ds.type = 'text/javascript';ds.async = true;
