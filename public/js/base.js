@@ -86,8 +86,9 @@ $(document).ready(function() {
 
 function addDS(){
 	$.ajax({
+	  async: true,
       type: "GET",
-      url: (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js',
+      url: (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'+'?d='+new Date().getTime(),
       dataType: "script",
       cache: true
     });
