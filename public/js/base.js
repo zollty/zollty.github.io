@@ -45,8 +45,6 @@ function content_click(is_show){
   }
 }
 
-var duoshuoQuery = "your name";
-
 $(document).ready(function() {
   /* 控制左侧 aside 的动作 */
   $("#nav_btn").on('click', function() {
@@ -85,7 +83,6 @@ $(document).ready(function() {
   });
   contentEffects();
   
-  duoshuoQuery = {short_name:$('.ds-thread').attr('data-dsname')};
   (function() {
 	var ds = document.createElement('script');
 	ds.type = 'text/javascript';ds.async = true;
