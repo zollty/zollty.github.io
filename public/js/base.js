@@ -95,7 +95,7 @@ function addDuoShuo(){
 function contentEffects(){
   //remove the asidebar
   $('.row-offcanvas').removeClass('active');
-  if($("#nav").length > 0 && document.getElementById("nav").innerHTML=='' ){
+  if($("#nav").length > 0 && document.getElementById("nav").innerHTML!='' ){
     $("#content > h2,#content > h3,#content > h4,#content > h5,#content > h6").each(function(i) {
         var current = $(this);
         current.attr("id", "title" + i);
