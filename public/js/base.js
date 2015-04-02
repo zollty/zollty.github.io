@@ -122,5 +122,5 @@ function contentEffects(){
   
   addDS();
   
-  alert(j.DOMAIN);
+  alert(window.DUOSHUO);
 }
