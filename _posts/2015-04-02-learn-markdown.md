@@ -1,7 +1,7 @@
----
+﻿---
 layout: post
 title: Learn Markdown
-category: ժ¼
+category: 摘录
 tags: Linux
 keywords: 
 ---
