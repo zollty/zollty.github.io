@@ -121,4 +121,6 @@ function contentEffects(){
   }
   
   addDS();
+  
+  alert(j.DOMAIN);
 }
