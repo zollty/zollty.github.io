@@ -84,6 +84,15 @@ $(document).ready(function() {
   contentEffects();
 });
 
+function addDS(){
+	$.ajax({
+      type: "GET",
+      url: (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js',
+      dataType: "script",
+      cache: true
+    });
+}
+
 function addDuoShuo(){
 	var ds = document.createElement('script');
 	ds.type = 'text/javascript';ds.async = true;
@@ -110,5 +119,5 @@ function contentEffects(){
     $('#content_btn').hide();
   }
   
-  addDuoShuo();
+  addDS();
 }
