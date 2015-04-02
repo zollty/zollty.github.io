@@ -121,6 +121,5 @@ function contentEffects(){
   }
   
   addDS();
-  
-  alert(window.DUOSHUO);
+  window.DUOSHUO.init();
 }
