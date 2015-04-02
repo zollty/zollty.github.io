@@ -95,10 +95,17 @@ function addDS(){
 }
 
 function addDuoShuo(){
+	
+	if(document.getElementsById('duosjs').length > 0) {
+		window.DUOSHUO.init();
+		return;
+	}
+
 	var ds = document.createElement('script');
 	ds.type = 'text/javascript';ds.async = true;
 	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
 	ds.charset = 'UTF-8';
+	ds.id = 'duosjs';
 	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 }
 
@@ -120,5 +127,5 @@ function contentEffects(){
     $('#content_btn').hide();
   }
   
-  addDS();
+  addDuoShuo();
 }
