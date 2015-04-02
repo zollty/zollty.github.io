@@ -96,7 +96,7 @@ function addDS(){
 
 function addDuoShuo(){
 	
-	if(document.getElementsById('duosjs').length > 0) {
+	if(document.getElementsById('duosjs')) {
 		window.DUOSHUO.init();
 		return;
 	}
