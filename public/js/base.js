@@ -84,23 +84,11 @@ $(document).ready(function() {
   contentEffects();
 });
 
-function addDS(){
-	$.ajax({
-      type: "GET",
-      url: (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js',
-      dataType: "script",
-      cache: true
-    });
-	window.DUOSHUO.init();
-}
-
 function addDuoShuo(){
-	
 	if(document.getElementById('duosjs')) {
 		window.DUOSHUO.init();
 		return;
 	}
-
 	var ds = document.createElement('script');
 	ds.type = 'text/javascript';ds.async = true;
 	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
