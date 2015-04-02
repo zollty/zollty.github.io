@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Learn Markdown
 category: 摘录
