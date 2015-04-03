@@ -111,10 +111,12 @@ function contentEffects(){
     prettyPrint();
     $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
 	if( $("#nav").html()!="" ) {
-		$('#content_btn').show();
+		$('#content_btn').css('display', '');
+	} else {
+		$('#content_btn').css('display', 'none');
 	}
   }else{
-    $('#content_btn').hide();
+    $('#content_btn').css('display', 'none');
   }
   
   addDuoShuo();
