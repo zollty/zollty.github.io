@@ -100,7 +100,7 @@ function addDuoShuo(){
 function contentEffects(){
   //remove the asidebar
   $('.row-offcanvas').removeClass('active');
-  if($("#nav").length > 0 && $("#nav").html()!="" ){
+  if($("#nav").length > 0){
     $("#content > h2,#content > h3,#content > h4,#content > h5,#content > h6").each(function(i) {
         var current = $(this);
         current.attr("id", "title" + i);
@@ -108,9 +108,11 @@ function contentEffects(){
         $("#nav").append("<div style='margin-left:"+15*(tag-1)+"px'><a id='link" + i + "' href='#title" +i + "'>" + current.html() + "</a></div>");
     }); 
     $("pre").addClass("prettyprint");
-    prettyPrint(); 
+    prettyPrint();
     $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
-    $('#content_btn').show();
+	if( $("#nav").html()!="" ) {
+		$('#content_btn').show();
+	}
   }else{
     $('#content_btn').hide();
   }
