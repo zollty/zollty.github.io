@@ -2,7 +2,7 @@
 layout: post
 title: Learn Markdown
 category: 资料
-tags: Linux, Life
+tags: Linux Life
 keywords: Learn Markdown
 ---
 
