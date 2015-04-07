@@ -3,7 +3,7 @@
 		<ul class="post-list">
 		{% for post in site.related_posts limit:4 %}
 		  <li>
-			<a href='{{ post.url }}' style="font-size: 14px;">{{ post.title }}</a>
+			<a href='{{ post.url }}' class="pjaxlink" style="font-size: 14px;">{{ post.title }}</a>
 			<span style="float: right; padding-right: 10px;">{{ post.date | date:"%Y-%m-%d" }}</span>
 		  </li>
 		{% endfor %}
