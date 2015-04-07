@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 得此媳妇者，得天下！
-category: 摘录
+category: 资料
 tags: Life
 keywords: 媳妇 父母
 ---
