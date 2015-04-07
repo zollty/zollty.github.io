@@ -1,14 +1,14 @@
 ﻿<div class="article-footer clearfix" style="background: #fafafa; padding: 0 4%;">
 		<div class="article-catetags">
-			<div class="article-categories">
-			  <span style="font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;content: '\f07b';"></span>
+			<div class="article-categories" style="padding: .5em 0; float: left;">
+			  <i class="fa fa-folder"></i>
 			  {% for category in page.categories %} 
 			  <a class="article-category-link" href="/categories/{{ category }}/">{{ category }}</a>
 			  {% endfor %}
 			</div>
 			
-			<div class="article-tags">
-			  <span style="font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;width: 1.2em;height: 1.2em;position: absolute;top: 50%;left: 50%;margin-top: -.6em;margin-left: -.6em;content: '\f02c';"></span>
+			<div class="article-tags" style="padding: .5em 0; float: left;">
+			  <i class="fa fa-tags"></i>
 			  {% for tag in page.tags %} 
 			  <a href="/tags/{{ tag }}/">{{ tag }}</a>
 			  {% endfor %}
