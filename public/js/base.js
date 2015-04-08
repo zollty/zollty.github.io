@@ -78,18 +78,12 @@ function addDuoShuo(){
 
 /* 控制文章章节列表按钮 */
 function content_click(){ // is_show
-  var is_hide;
   if( $('#content_table').css('display')=='' ) {
-	is_hide = false;
-  } else {
-	is_hide = true;
-  }
-  if (is_hide) {
-    $('#content_table').css('display', '');//.show();
-    $('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
-  } else {
-    $('#content_table').css('display', 'none');//.hide();
+	$('#content_table').css('display', 'none');//.hide();
     $('#content_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
+  } else {
+	$('#content_table').css('display', '');//.show();
+    $('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
   }
 }
 
@@ -114,9 +108,13 @@ function contentEffects(){
 	}
 	
 	$("#content_btn").on('click', function(){
-	    //isClicked = $(this).data('clicked');
-	    content_click(); // !isClicked
-        //$(this).data('clicked',!isClicked);
+	  if( $('#content_table').css('display')=='' ) {
+		  $('#content_table').css('display', 'none');
+		  $('#content_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
+	  } else {
+		  $('#content_table').css('display', '');
+		  $('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
+	  }
 	});
   }
   else{
