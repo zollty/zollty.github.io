@@ -2,9 +2,6 @@ permalink: /archive/:year/:month/:title.html
 paginate: 10
 markdown: rdiscount
 
-# Conversion
-lsi: true
-
 # 作者信息
 author: 
   name: Zollty
