@@ -15,9 +15,10 @@ layout: base
 	
 	{% include catetags.html %}
 	{% include related-posts.html %}
+{% if site.comments.show == true and page.comments != false %}
     {% include disqus.html %}
     {% include duoshuo.html %}
-	
+{% endif %}
   </div>
   <!-- 目录 -->
   <div id="catalog" class="my-content-table" style="display: none;">
