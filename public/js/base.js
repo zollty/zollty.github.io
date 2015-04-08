@@ -108,12 +108,12 @@ function contentEffects(){
 	}
 	
 	$("#content_btn").on('click', function(){
-	  if( $('#content_table').css('display')=='' ) {
-		  $('#content_table').css('display', 'none');
-		  $('#content_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
+	  if( $('#content_table').css('display')=='none' ) {
+		$('#content_table').css('display', 'block');
+		$('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
 	  } else {
-		  $('#content_table').css('display', '');
-		  $('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
+		$('#content_table').css('display', 'none');
+		$('#content_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
 	  }
 	});
   }
