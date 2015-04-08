@@ -28,9 +28,14 @@ ga:
   id: 
   url: 
 
-# disqus 设置
-disqus:
-  shortname: zollty
+# comments 设置
+comments:
+  show: true
+  duoshuo:
+    name: zollty
+  disqus:
+    name: zollty
+
 
 # 主题设置，自动激活某个标签
 active: 技术

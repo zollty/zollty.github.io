@@ -10,9 +10,11 @@ layout: base
     <div id="page-content">
       {{ content }}
     </div>
-    <hr>
+    <hr class="article-bottom-hr">
 	
-    {% include disqus.html %}
-    {% include duoshuo.html %}
+{% if site.comments.show %}
+	{% include disqus.html %}
+	{% include duoshuo.html %}
+{% endif %}
   </div>
 </div>
