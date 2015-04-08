@@ -98,9 +98,7 @@ function createCatalog() {
   
   if( $("#nav").html()!="" ) {
 	$('#catalog_btn').css('display', 'block');
-	
 	$("#catalog_btn").on('click', catalogBtnControl);
-	
   } else {
 	$('#catalog_btn').css('display', 'none');
   }
@@ -108,21 +106,17 @@ function createCatalog() {
 }
 
 function contentEffects(){
-  //remove the asidebar
+  // remove the asidebar
   $('.row-offcanvas').removeClass('active');
-  if($("#nav").length > 0){
-  
+  // if have catalog create it
+  if($("#catalog").length > 0){
     createCatalog();
-	
-    $("pre").addClass("prettyprint");
-    prettyPrint();
-	
-    $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
-	
   }
-  else{
-    $('#catalog_btn').css('display', 'none');
-  }
+  
+  $("pre").addClass("prettyprint");
+  prettyPrint();
+	
+  $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
   
   addDuoShuo();
 }
