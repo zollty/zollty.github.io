@@ -60,6 +60,11 @@ $(document).ready(function() {
       cache: true
     });
   });
+  
+  $('.sidebar-a').on('click', function() {
+    $(this).addClass('sa-active').siblings().removeClass('sa-active');
+  });
+  
   contentEffects();
 });
 
