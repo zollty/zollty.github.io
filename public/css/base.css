@@ -87,9 +87,7 @@ blockquote p {
 }
 
 .sa-active{
-  color: #29a284;
   background: rgba(242, 242, 242, 0.5);
-  box-shadow: -1px 1px rgba(229, 232, 236, 0.9);
 }
 
 .my-content-table {
