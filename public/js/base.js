@@ -76,49 +76,52 @@ function addDuoShuo(){
 	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 }
 
-/* 控制文章章节列表按钮 */
-function content_click(){ // is_show
-  if( $('#content_table').css('display')=='' ) {
-	$('#content_table').css('display', 'none');//.hide();
-    $('#content_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
+function catalogBtnControl(){
+  if( $('#catalog').css('display')=='none' ) {
+	$('#catalog').css('display', 'block');
+	$('#catalog_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
+	alert(document.getElementById("catalog").offsetHeight);
   } else {
-	$('#content_table').css('display', '');//.show();
-    $('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
+	$('#catalog').css('display', 'none');
+	$('#catalog_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
+	alert(document.getElementById("catalog").offsetHeight);
   }
+}
+
+function createCatalog() {
+  $("#content > h2,#content > h3,#content > h4,#content > h5,#content > h6").each(function(i) {
+	var current = $(this);
+	current.attr("id", "title" + i);
+	tag = current.prop('tagName').substr(-1);
+	$("#nav").append("<div style='margin-left:"+15*(tag-1)+"px'><a id='link" + i + "' href='#title" +i + "'>" + current.html() + "</a></div>");
+  });
+  
+  if( $("#nav").html()!="" ) {
+	$('#catalog_btn').css('display', 'block');
+	
+	$("#catalog_btn").on('click', catalogBtnControl);
+	
+  } else {
+	$('#catalog_btn').css('display', 'none');
+  }
+  
 }
 
 function contentEffects(){
   //remove the asidebar
   $('.row-offcanvas').removeClass('active');
   if($("#nav").length > 0){
-    $("#content > h2,#content > h3,#content > h4,#content > h5,#content > h6").each(function(i) {
-        var current = $(this);
-        current.attr("id", "title" + i);
-        tag = current.prop('tagName').substr(-1);
-        $("#nav").append("<div style='margin-left:"+15*(tag-1)+"px'><a id='link" + i + "' href='#title" +i + "'>" + current.html() + "</a></div>");
-    }); 
+  
+    createCatalog();
+	
     $("pre").addClass("prettyprint");
     prettyPrint();
-    $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
-	if( $("#nav").html()!="" ) {
-		$('#content_btn').css('display', '');
-		alert(document.getElementById("content_table").offsetHeight);
-	} else {
-		$('#content_btn').css('display', 'none');
-	}
 	
-	$("#content_btn").on('click', function(){
-	  if( $('#content_table').css('display')=='none' ) {
-		$('#content_table').css('display', 'block');
-		$('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
-	  } else {
-		$('#content_table').css('display', 'none');
-		$('#content_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
-	  }
-	});
+    $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
+	
   }
   else{
-    $('#content_btn').css('display', 'none');
+    $('#catalog_btn').css('display', 'none');
   }
   
   addDuoShuo();
