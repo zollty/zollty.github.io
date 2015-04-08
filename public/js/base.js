@@ -78,13 +78,13 @@ function addDuoShuo(){
 
 /* 控制文章章节列表按钮 */
 function content_click(){ // is_show
-  var is_show;
+  var is_hide;
   if( $('#content_btn').css('display')=='' ) {
-	is_show = true;
+	is_hide = false;
   } else {
-	is_show = false;
+	is_hide = true;
   }
-  if (is_show) {
+  if (is_hide) {
     $('#content_table').css('display', '');//.show();
     $('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
   } else {
