@@ -79,7 +79,7 @@ function addDuoShuo(){
 /* 控制文章章节列表按钮 */
 function content_click(){ // is_show
   var is_hide;
-  if( $('#content_btn').css('display')=='' ) {
+  if( $('#content_table').css('display')=='' ) {
 	is_hide = false;
   } else {
 	is_hide = true;
