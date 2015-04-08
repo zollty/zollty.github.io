@@ -82,8 +82,20 @@ blockquote p {
   color: #2a6496;
   background-color: #fafaf6;
 }
+.article-bottom-hr {
+  margin-bottom: 0;
+}
+.my-content-table {
+  position: fixed;
+  right: 20px;
+  top: 110px;
+  display: none;
+}
+.my-c-panel-body {
+  padding-left: 0;
+  padding-top: 10px;
+}
 /* 显示评论按钮 */
 .show-commend {
   width: 100%;
-  margin-bottom: 40px;
 }

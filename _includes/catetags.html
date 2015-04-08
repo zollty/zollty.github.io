@@ -4,8 +4,8 @@
   float: left;
   color: #d6d6d6;
   margin-top: .3em;
-  margin-right: 3em;">
-			  <i class="fa fa-folder"></i>
+  margin-right: 1em;">
+			  <i class="fa fa-th-list"></i>
 			  {% for category in page.categories %} 
 			  <a class="article-category-link" style="padding: .5em; margin: 0 .3em;" href="/categories/{{ category }}/">{{ category }}</a>
 			  {% endfor %}
@@ -14,8 +14,7 @@
 			<div class="article-tags" style="padding: .5em 0;
   float: left;
   color: #d6d6d6;
-  margin-top: .3em;
-  margin-right: 3em;">
+  margin-top: .3em;">
 			  <i class="fa fa-tags"></i>
 			  {% for tag in page.tags %} 
 			  <a href="/tags/{{ tag }}/" style="padding: .5em; margin: 0 .3em; background: #e6e6e6;">{{ tag }}</a>
@@ -23,4 +22,3 @@
 			</div>
 		</div>
 	</div>
-

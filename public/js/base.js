@@ -34,34 +34,13 @@ function nav_click(is_show) {
     $('#nav_btn i').removeClass('fa-angle-left').addClass('fa-angle-right');  
   }  
 }
-/* 控制文章章节列表按钮 */
-function content_click(is_show){
-  if (is_show) {
-    $('#content_table').show();
-    $('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
-  } else {
-    $('#content_table').hide();
-    $('#content_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
-  }
-}
 
 $(document).ready(function() {
   /* 控制左侧 aside 的动作 */
   $("#nav_btn").on('click', function() {
     isClicked = $(this).data('clicked');
-
     nav_click(isClicked);
-
     $(this).data('clicked', !isClicked);
-  });
-
-  $("#content_btn").on('click', function(){
-    isClicked = $(this).data('clicked');
-
-    content_click(!isClicked);
-
-    $(this).data('clicked',!isClicked);
-
   });
 
   $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 10000 });
@@ -97,6 +76,23 @@ function addDuoShuo(){
 	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 }
 
+/* 控制文章章节列表按钮 */
+function content_click(){ // is_show
+  var is_show;
+  if( $('#content_btn').css('display')=='' ) {
+	is_show = true;
+  } else {
+	is_show = false;
+  }
+  if (is_show) {
+    $('#content_table').css('display', '');//.show();
+    $('#content_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
+  } else {
+    $('#content_table').css('display', 'none');//.hide();
+    $('#content_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
+  }
+}
+
 function contentEffects(){
   //remove the asidebar
   $('.row-offcanvas').removeClass('active');
@@ -112,10 +108,18 @@ function contentEffects(){
     $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
 	if( $("#nav").html()!="" ) {
 		$('#content_btn').css('display', '');
+		alert(document.getElementById("content_table").offsetHeight);
 	} else {
 		$('#content_btn').css('display', 'none');
 	}
-  }else{
+	
+	$("#content_btn").on('click', function(){
+	    //isClicked = $(this).data('clicked');
+	    content_click(); // !isClicked
+        //$(this).data('clicked',!isClicked);
+	});
+  }
+  else{
     $('#content_btn').css('display', 'none');
   }
   
