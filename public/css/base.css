@@ -105,3 +105,20 @@ blockquote p {
 .show-commend {
   width: 100%;
 }
+
+/* zs-nav */
+.zs-narrow-nav .navbar {
+  min-height: 40px;
+}
+.zs-narrow-nav .navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.zs-narrow-nav .navbar-brand {
+  height: 40px;
+  padding-top: 10px;
+}
+.zs-narrow-nav .navbar-toggle {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
