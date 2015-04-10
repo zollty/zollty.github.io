@@ -1,9 +1,41 @@
+$(document).ready(function() {
+
+  /* 控制左侧 aside 的动作 */
+  $("#nav_btn").on('click', nav_click);
+  
+  /* Control pjaxlink */
+  $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 5000 });
+  $(document).on("pjax:start", function() {
+	if($("#base-wrapper").width() < 992) {
+	  nav_click();
+	}
+  });
+  $(document).on("pjax:end", function() {
+    $('.aside3').scrollTop(0);
+    contentEffects();
+  });
+  
+  $('body').on('click', '.show-commend', function(){
+    var ds_loaded = false;
+    window.disqus_shortname = $('.show-commend').attr('name');
+    $.ajax({
+      type: "GET",
+      url: "http://" + disqus_shortname + ".disqus.com/embed.js",
+      dataType: "script",
+      cache: true
+    });
+  });
+  
+  $('.sidebar-a').on('click', function() {
+    $(this).addClass('sa-active').siblings().removeClass('sa-active');
+  });
+  
+  contentEffects();
+});
+
 /* 控制导航按钮动作 */
 function nav_click() {
-  //var isClicked = $(this).data('clicked');
-  
   if( $('#nav_btn i').hasClass('fa-angle-right') ) {
-  //if (isClicked) {
     /* 显示左侧aside */
     $('.aside')
       .addClass('visible-md visible-lg')
@@ -36,44 +68,7 @@ function nav_click() {
     /* 变化按钮图标 */
     $('#nav_btn i').removeClass('fa-angle-left').addClass('fa-angle-right');  
   }
-  
-  //$(this).data('clicked', !isClicked);
 }
-
-$(document).ready(function() {
-  /* 控制左侧 aside 的动作 */
-  //$("#nav_btn").on('click', nav_click);
-
-  $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 5000 });
-  $(document).on("pjax:start", function() {
-    //if($("body").find('.container').width() < 992) {
-	//  nav_click(); //$('#nav_btn').click();
-	//}
-	if($("#base-wrapper").width() < 992) {
-	  nav_click();
-	}
-  });
-  $(document).on("pjax:end", function() {
-    $('.aside3').scrollTop(0);
-    contentEffects();
-  });
-  $('body').on('click', '.show-commend', function(){
-    var ds_loaded = false;
-    window.disqus_shortname = $('.show-commend').attr('name');
-    $.ajax({
-      type: "GET",
-      url: "http://" + disqus_shortname + ".disqus.com/embed.js",
-      dataType: "script",
-      cache: true
-    });
-  });
-  
-  $('.sidebar-a').on('click', function() {
-    $(this).addClass('sa-active').siblings().removeClass('sa-active');
-  });
-  
-  contentEffects();
-});
 
 function addDuoShuo(){
 	if(document.getElementById('duosjs')) {
