@@ -6,7 +6,7 @@ $(document).ready(function() {
   /* Control pjaxlink */
   $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 5000 });
   $(document).on("pjax:start", function() {
-	if($("#base-wrapper").width() < 992) {
+	if($("#base-wrapper").width() < 992 && $('#nav_btn i').hasClass('fa-angle-right')) {
 	  nav_click();
 	}
   });
