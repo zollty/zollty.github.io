@@ -1,8 +1,9 @@
 /* 控制导航按钮动作 */
 function nav_click() {
-  var isClicked = $(this).data('clicked');
+  //var isClicked = $(this).data('clicked');
   
-  if (isClicked) {
+  if( $('#nav_btn i').hasClass('fa-angle-right') ) {
+  //if (isClicked) {
     /* 显示左侧aside */
     $('.aside')
       .addClass('visible-md visible-lg')
@@ -36,7 +37,7 @@ function nav_click() {
     $('#nav_btn i').removeClass('fa-angle-left').addClass('fa-angle-right');  
   }
   
-  $(this).data('clicked', !isClicked);
+  //$(this).data('clicked', !isClicked);
 }
 
 $(document).ready(function() {
