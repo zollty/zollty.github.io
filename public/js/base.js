@@ -44,10 +44,12 @@ $(document).ready(function() {
   $("#nav_btn").on('click', nav_click);
 
   $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 10000 });
-  $(document).on("pjax:end", function() {
+  $(document).on("pjax:start", function() {
     if($("body").find('.container').width() < 992) {
 	  nav_click(); //$('#nav_btn').click();
 	}
+  });
+  $(document).on("pjax:end", function() {
     $('.aside3').scrollTop(0);
     contentEffects();
   });
