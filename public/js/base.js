@@ -114,7 +114,6 @@ function createCatalog() {
   } else {
 	$('#catalog_btn').css('display', 'none');
   }
-  
 }
 
 function contentEffects(){
