@@ -43,10 +43,13 @@ $(document).ready(function() {
   /* 控制左侧 aside 的动作 */
   $("#nav_btn").on('click', nav_click);
 
-  $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 10000 });
+  $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 5000 });
   $(document).on("pjax:start", function() {
-    if($("body").find('.container').width() < 992) {
-	  nav_click(); //$('#nav_btn').click();
+    //if($("body").find('.container').width() < 992) {
+	//  nav_click(); //$('#nav_btn').click();
+	//}
+	if($("#base-wrapper").width() < 992) {
+	  nav_click();
 	}
   });
   $(document).on("pjax:end", function() {
