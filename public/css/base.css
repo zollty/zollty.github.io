@@ -90,7 +90,7 @@ blockquote p {
 .my-content-table {
   position: fixed;
   right: 20px;
-  top: 110px;
+  top: 150px;
 }
 .my-c-panel-body {
   padding-left: 0;
@@ -99,7 +99,7 @@ blockquote p {
 .catalog-btn-div {
   position: fixed;
   right: 20px;
-  top: 60px;
+  top: 110px;
 }
 /* 显示评论按钮 */
 .show-commend {
