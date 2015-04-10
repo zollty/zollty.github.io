@@ -92,11 +92,10 @@ function catalogBtnControl(){
   if( $('#catalog').css('display')=='none' ) {
 	$('#catalog').css('display', 'block');
 	$('#catalog_btn i').removeClass('fa-angle-down').addClass('fa-angle-up');
-	alert(document.getElementById("catalog").offsetHeight);
+	//alert(document.getElementById("catalog").offsetHeight);
   } else {
 	$('#catalog').css('display', 'none');
 	$('#catalog_btn i').removeClass('fa-angle-up').addClass('fa-angle-down');
-	alert(document.getElementById("catalog").offsetHeight);
   }
 }
 
