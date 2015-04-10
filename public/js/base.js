@@ -1,6 +1,8 @@
 /* 控制导航按钮动作 */
-function nav_click(is_show) {
-  if (is_show) {
+function nav_click() {
+  var isClicked = $(this).data('clicked');
+  
+  if (isClicked) {
     /* 显示左侧aside */
     $('.aside')
       .addClass('visible-md visible-lg')
@@ -32,21 +34,20 @@ function nav_click(is_show) {
       .addClass('col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1');
     /* 变化按钮图标 */
     $('#nav_btn i').removeClass('fa-angle-left').addClass('fa-angle-right');  
-  }  
+  }
+  
+  $(this).data('clicked', !isClicked);
 }
 
 $(document).ready(function() {
   /* 控制左侧 aside 的动作 */
-  $("#nav_btn").on('click', function() {
-    isClicked = $(this).data('clicked');
-    nav_click(isClicked);
-    $(this).data('clicked', !isClicked);
-  });
+  $("#nav_btn").on('click', nav_click);
 
   $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 10000 });
   $(document).on("pjax:end", function() {
-    if($("body").find('.container').width() < 992)
-      $('#nav_btn').click();
+    if($("body").find('.container').width() < 992) {
+	  nav_click(); //$('#nav_btn').click();
+	}
     $('.aside3').scrollTop(0);
     contentEffects();
   });
