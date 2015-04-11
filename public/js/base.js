@@ -37,16 +37,16 @@ $(document).ready(function() {
 function nav_click() {
   if( $('#nav_btn i').hasClass('fa-angle-right') ) {
     /* 显示左侧aside */
-    $('.aside')
+    $('.aside1')
       .addClass('visible-md visible-lg')
       .removeClass('hidden-md hidden-lg')
     /* 调整右侧内容 */
     $('.aside3')
       .removeClass('col-md-12 col-lg-12')
-      .addClass('col-md-8 col-lg-8');
+      .addClass('col-md-10 col-lg-10');
     /* 调整文字内容格式 */
     $('.aside3-content')
-      .removeClass('col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1')
+      .removeClass('col-md-12 col-lg-12 col-md-offset-1 col-lg-offset-1')
       .addClass('col-md-12');
     /* 变化按钮 */
     $('#nav_btn i')
@@ -54,17 +54,17 @@ function nav_click() {
       .addClass('fa-angle-left');
   } else {
     /* 隐藏左侧aside */
-    $('.aside')
+    $('.aside1')
       .removeClass('visible-md visible-lg')
       .addClass('hidden-md hidden-lg');
     /* 右侧内容最大化 */
     $('.aside3')
-      .removeClass('col-md-8 col-lg-8')
+      .removeClass('col-md-10 col-lg-10')
       .addClass('col-md-12 col-lg-12');
     /* 修改文字排版 */
     $('.aside3-content')
       .removeClass('col-md-12')
-      .addClass('col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1');
+      .addClass('col-md-12 col-lg-12 col-md-offset-1 col-lg-offset-1');
     /* 变化按钮图标 */
     $('#nav_btn i').removeClass('fa-angle-left').addClass('fa-angle-right');  
   }
