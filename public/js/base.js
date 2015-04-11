@@ -26,11 +26,20 @@ $(document).ready(function() {
     });
   });
   
+  $('.my-lf-tab').on('click', function() {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
+  
   $('.sidebar-a').on('click', function() {
     $(this).addClass('sa-active').siblings().removeClass('sa-active');
   });
   
   contentEffects();
+  
+    $('#lf-nav a').click(function (e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	});
 });
 
 /* 控制导航按钮动作 */
