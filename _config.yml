@@ -1,5 +1,6 @@
 permalink: /archive/:year/:month/:title.html
 paginate: 10
+paginate_path: '/pages/:num'
 markdown: rdiscount
 
 # Conversion 在github中是无效的
