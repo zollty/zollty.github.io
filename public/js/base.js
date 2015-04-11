@@ -35,11 +35,6 @@ $(document).ready(function() {
   });
   
   contentEffects();
-  
-    $('#lf-nav a').click(function (e) {
-	  e.preventDefault();
-	  $(this).tab('show');
-	});
 });
 
 /* 控制导航按钮动作 */
